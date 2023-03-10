@@ -7,7 +7,7 @@ const deleteBook = require("../controllers/deleteBookById");
 router.get("/books", showAllBooks); // done
 router.post("/books/:bookname", postNewBook); // done
 
-router.put("/books/:bookid", changeBookName); // posting in body not working
+router.put("/books/:bookid", changeBookName); // done
 
 router.delete("/books/:bookid", deleteBook); // done
 

@@ -6,8 +6,7 @@ const postNewBook = async (req, res) => {
     let bookN = req.params.bookname;
 
     await bookModel.create({
-        bookName: bookN,
-        bookId: new mongoose.Types.ObjectId
+        bookName: bookN
     }).then(() => {
             res.redirect("/library/books");
         }).catch((err) => {

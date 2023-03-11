@@ -1,6 +1,6 @@
 const bookModel = require("../models/bookModel");
 const deleteBookById = async (req, res) => {
-    bookModel.findOneAndDelete({ bookId: req.params.bookid }).then(
+    bookModel.findByIdAndDelete(req.params.bookid).then(
         () => {
             res.redirect("/library/books");
         }
